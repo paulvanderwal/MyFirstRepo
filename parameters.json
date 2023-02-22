@@ -1,0 +1,124 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverName": {
+            "value": "pwpostgre01"
+        },
+        "location": {
+            "value": "westeurope"
+        },
+        "serverEdition": {
+            "value": "Burstable"
+        },
+        "storageSizeGB": {
+            "value": 32
+        },
+        "haEnabled": {
+            "value": "Disabled"
+        },
+        "vnetData": {
+            "value": {
+                "isLoading": false,
+                "virtualNetworkName": "SandboxPvdW-s-we-rg-vnet",
+                "virtualNetworkId": "/subscriptions/95d5d981-8929-41ae-b428-915c1e7f1405/resourceGroups/SandboxPvdW-s-we-rg/providers/Microsoft.Network/virtualNetworks/SandboxPvdW-s-we-rg-vnet",
+                "subnetList": [
+                    {
+                        "subnetName": "default",
+                        "subnetNeedsUpdate": false,
+                        "subnetProperties": {
+                            "addressPrefix": "10.0.0.0/24",
+                            "delegations": [
+                                {
+                                    "name": "dlg-Microsoft.DBforPostgreSQL-flexibleServers",
+                                    "properties": {
+                                        "serviceName": "Microsoft.DBforPostgreSQL/flexibleServers"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "subnetName": "default",
+                "virtualNetworkSubscriptionName": "RDW Sandbox",
+                "virtualNetworkAddressPrefix": "10.0.0.0/24",
+                "virtualNetworkResourceGroupName": "SandboxPvdW-s-we-rg",
+                "location": "westeurope",
+                "subscriptionId": "95d5d981-8929-41ae-b428-915c1e7f1405",
+                "subnetProperties": {
+                    "addressPrefix": "10.0.0.0/24",
+                    "delegations": [
+                        {
+                            "name": "dlg-Microsoft.DBforPostgreSQL-flexibleServers",
+                            "properties": {
+                                "serviceName": "Microsoft.DBforPostgreSQL/flexibleServers"
+                            }
+                        }
+                    ]
+                },
+                "subnetNeedsUpdate": false,
+                "isNewVnet": true,
+                "delegatedSubnetArguments": {
+                    "SubnetArmResourceId": "/subscriptions/95d5d981-8929-41ae-b428-915c1e7f1405/resourceGroups/SandboxPvdW-s-we-rg/providers/Microsoft.Network/virtualNetworks/SandboxPvdW-s-we-rg-vnet/subnets/default"
+                },
+                "usePrivateDnsZone": true,
+                "isNewPrivateDnsZone": true,
+                "privateDnsResourceGroup": "SandboxPvdW-s-we-rg",
+                "privateDnsSubscriptionId": "95d5d981-8929-41ae-b428-915c1e7f1405",
+                "privateDnsZoneName": "pwpostgre01.private.postgres.database.azure.com",
+                "privateDnsZoneSubscription": "RDW Sandbox",
+                "privateDnsZoneArguments": {
+                    "PrivateDnsZoneArmResourceId": "/subscriptions/95d5d981-8929-41ae-b428-915c1e7f1405/resourceGroups/SandboxPvdW-s-we-rg/providers/Microsoft.Network/privateDnsZones/pwpostgre01.private.postgres.database.azure.com"
+                },
+                "linkVirtualNetwork": true,
+                "Network": {
+                    "DelegatedSubnetResourceId": "/subscriptions/95d5d981-8929-41ae-b428-915c1e7f1405/resourceGroups/SandboxPvdW-s-we-rg/providers/Microsoft.Network/virtualNetworks/SandboxPvdW-s-we-rg-vnet/subnets/default",
+                    "PrivateDnsZoneArmResourceId": "/subscriptions/95d5d981-8929-41ae-b428-915c1e7f1405/resourceGroups/SandboxPvdW-s-we-rg/providers/Microsoft.Network/privateDnsZones/pwpostgre01.private.postgres.database.azure.com"
+                }
+            }
+        },
+        "backupRetentionDays": {
+            "value": 7
+        },
+        "geoRedundantBackup": {
+            "value": "Disabled"
+        },
+        "availabilityZone": {
+            "value": "1"
+        },
+        "vmName": {
+            "value": "Standard_B1ms"
+        },
+        "standbyAvailabilityZone": {
+            "value": ""
+        },
+        "virtualNetworkDeploymentName": {
+            "value": "virtualNetwork_20230222T093351403Z"
+        },
+        "virtualNetworkLinkDeploymentName": {
+            "value": "virtualNetworkLink_20230222T093351403Z"
+        },
+        "privateDnsZoneDeploymentName": {
+            "value": "privateDnsZone_20230222T093351403Z"
+        },
+        "tags": {
+            "value": {
+                "Serviceteam": "CIP",
+                "BusItDienst": "CIP",
+                "Kostenplaats": "497"
+            }
+        },
+        "version": {
+            "value": "13"
+        },
+        "administratorLogin": {
+            "value": "postgreadmin"
+        },
+        "administratorLoginPassword": {
+            "value": null
+        },
+        "apiVersion": {
+            "value": "2022-03-08-preview"
+        }
+    }
+}
